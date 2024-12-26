@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-size: 1.03em;
+    color: #00ffff;
+}
+
+body {
+    background-color: #1A1A1A;
+}
+
+/* Styling for the header */
+header {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    padding: 20px 10%;
+    color: #00ffff;
+}
+header ul {
+    display: flex;
+    gap: 3em;
+    list-style: none;
+}
+header ul a {
+    text-decoration: none;
+}
+.nav-link {
+    text-decoration: none;
+    color: #00ffff;
+    transition: color 0.3s ease;
+}
+
+.nav-link.active {
+    color: #FF5722; /* Change to your preferred active color */
+    font-weight: bold; /* Optional: Make active link stand out */
+}
+.ham {
+    display: none;
+}
+
+/* Styling for the main container */
+.app__content {
+    min-height: 80vh;
+    padding: 20px 10%;
+}
+
+/* Hero Section styling */
+.hero {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero__left {
+    width: 50%;
+}
+.hero__left h2 {
+    font-size: 5em;
+    line-height: 0.9em;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+.hero__left h2 span {
+    font-weight: 800;
+}
+.hero__left .call-to-action {
+    display: flex;
+    gap: 1.2em;
+    margin-top: 20px;
+}
+.hero__left .call-to-action a {
+    height: 40px;
+    width: 130px;
+    font-size: 0.7em;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero__left .call-to-action a:first-child{
+    background-color: #FF5722;
+}
+.hero__left .call-to-action a:last-child {
+    border: 1px solid #00ffff;
+}
+.hero__right {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero__right .hero__circle {
+    border: 5px dashed #FF5722;
+    border-radius: 50%;
+    padding: 20px;
+}
+.hero__right .hero__circle .photo {
+    width: 300px;
+    height: 300px;
+}
+
+/* Styling for the project component */
+.projects {
+    margin-top: 20vh;
+}
+.projects h3 {
+    font-size: 3em;
+    font-weight: 800;
+}
+.projects .container {
+    display: grid;
+    gap: 20px 50px;
+}
+.projects .project-image {
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #00ffff;
+}
+.grid-one {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.grid-two {
+    grid-column-start: 2;
+    grid-column-end: 10;
+}
+.grid-three {
+    grid-column-start: 1;
+    grid-column-end: 9;
+}
+.grid-four {
+    grid-column-start: 9;
+    grid-column-end: 10;
+}
+
+/* Styling for the experience Component */
+.experience {
+    margin-top: 10vh;
+}
+.experience h3 {
+    font-size: 3em;
+    font-weight: 800;
+}
+.experience-container{
+    display: flex;
+    width: 100%;
+    height: 240px;
+}
+.experience-container .vertical-line {
+    display: flex;
+    flex-direction: column;
+    width: 5px;
+    height: 240px;
+    background-color: #00ffff;
+    margin-right: 20px;
+}
+.experience-container .vertical-line span {
+    height: 60px;
+    width: 5px;
+}
+.experience-container .vertical-line .active {
+    width: 5px;
+    height: 60px;
+    background-color: #FF5722;
+}
+.experience-container .experience-company{
+    display: flex;
+    flex-direction: column;
+    height: 240px;
+    width: 200px;
+    justify-content: space-evenly;
+    margin-right: 160px;
+}
+.experience-container .experience-detail h5{
+    font-size: 0.7em;
+}
+.experience-container .experience-detail ul {
+    list-style-image: url("./assets/tick.svg");
+}
+
+/* Styling for the skills component */
+.skills {
+    margin-top: 10vh;
+    font-size: 1em;
+}
+.skills h3 {
+    font-size: 3em;
+    font-weight: 800;
+}
+.skill-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.skill-container h4 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.skills p{
+    opacity: 0.7;
+}
+
+/* Styling for the footer */
+footer {
+    position: relative;
+    bottom: 0;
+    height: 8vh;
+    padding: 20px 10%;
+    font-size: 0.9em;
+}
+footer a {
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+footer .footer__nav {
+    display: flex;
+    width: calc(100vw-120px);
+    justify-content: space-between;
+}
+footer ul {
+    display: flex;
+    gap: 3em;
+    list-style: none;
+}
+footer .footer__socials {
+    display: flex;
+    gap: 1em;
+}
+footer .footer__contact {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+footer .footer__contact h4 {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+footer .footer__contact .call-to-action {
+    display: flex;
+    gap: 1.2em;
+    margin-top: 20px;
+}
+footer .footer__contact .call-to-action a {
+    height: 40px;
+    width: 130px;
+    font-size: 0.7em;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer__contact .call-to-action a:first-child{
+    background-color: #FF5722;
+}
+footer .footer__contact .call-to-action a:last-child {
+    border: 1px solid #00ffff;
+}
+footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Responsive styling */
+@media (max-width: 1200px) {
+    header, .app__content, footer {
+        padding: 20px;
+    }
+    .projects .container {
+        display: block;
+    }
+    .hero {
+        display: block;
+    }
+    .hero__left {
+        width: 100%;
+    }
+    .hero__right {
+        width: 100%;
+        margin-top: 50px;
+    }
+}
+@media (max-width:768px) {
+    .ham {
+        display: block;
+    }
+    header nav, .contact {
+        display: none;
+    }
+    .mobile-nav {
+        padding: 0 40px;
+        margin-bottom: 40px;
+    }
+    .mobile-nav ul {
+        list-style: none;
+    }
+    footer {
+        text-align: center;
+    }
+    footer .footer__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 20px;
+    }
+    footer .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+span {
+    color: #FF5722;
+}
+.hide {
+    display: none;
+}
