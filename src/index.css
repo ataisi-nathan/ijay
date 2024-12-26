@@ -24,6 +24,10 @@ header {
     padding: 20px 10%;
     color: #00ffff;
 }
+header h1 {
+    font-weight: 700;
+    font-size: 1.7em;
+}
 header ul {
     display: flex;
     gap: 3em;
@@ -309,6 +313,29 @@ footer .footer-container {
     }
     .mobile-nav ul {
         list-style: none;
+    }
+    .hero h2 {
+        font-size: 3.5em;
+    }
+    .projects .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .experience{
+        margin-bottom: 20vh;
+    }
+    .experience .vertical-line, .experience .experience-company {
+        display: none;
+    }
+    .experience ul {
+        margin-left: 20px;
+    }
+    .skill-container {
+        flex-direction: column;
+        align-items: left;
+        padding-left: 20px;
+        gap: 1.5em;
     }
     footer {
         text-align: center;

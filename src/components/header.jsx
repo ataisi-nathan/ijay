@@ -12,9 +12,9 @@ function Header() {
     return (
         <>
             <header className="header">
-                <p className="logo">
+                <h1 className="logo">
                     Ijay<span>.</span>
-                </p>
+                </h1>
                 <nav>
                     <ul className="nav-list">
                         <li>
