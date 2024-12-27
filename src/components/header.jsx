@@ -26,12 +26,7 @@ function Header() {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink
-                                to="/projects"
-                                className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
-                            >
-                                Projects
-                            </NavLink>
+                            <a href="/#project">Projects</a>
                         </li>
                         <li>
                             <NavLink
@@ -63,12 +58,7 @@ function Header() {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink
-                                to="/projects"
-                                className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
-                            >
-                                Projects
-                            </NavLink>
+                            <a href="/#project">Projects</a>
                         </li>
                         <li>
                             <NavLink

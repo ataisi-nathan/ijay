@@ -23,6 +23,10 @@ body {
     background-color: var(--background-color);
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Styling for the header */
 header {
     display: flex;

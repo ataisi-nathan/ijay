@@ -3,7 +3,7 @@ import projectsData from "../data/projectsData";
 
 function Projects() {
     return (
-        <div className="projects">
+        <div className="projects" id="project">
             <h3>
                 Projects<span>.</span>
             </h3>
