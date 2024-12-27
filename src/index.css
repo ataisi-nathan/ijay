@@ -118,21 +118,56 @@ header ul a {
 /* Styling for the project component */
 .projects {
     margin-top: 20vh;
+    text-align: center;
+    padding: 20px;
 }
 .projects h3 {
     font-size: 3em;
     font-weight: 800;
 }
+.projects h4 {
+    margin: 10px 0;
+}
+
+.projects p {
+    font-size: 14px;
+    color: #555;
+}
 .projects .container {
     display: grid;
-    gap: 20px 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
 }
-.projects .project-image {
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.projects .container .project-image {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+/* .projects .project-image {
     height: 300px;
     width: 100%;
     border-radius: 10px;
     background-color: #00ffff;
-}
+} */
 .grid-one {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -158,6 +193,20 @@ header ul a {
     font-size: 3em;
     font-weight: 800;
 }
+.experience-company h4 {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.experience-company h4.active {
+    color: #FF5722;
+    font-weight: bold;
+}
+
+.vertical-line span.active {
+    background-color: #007bff;
+}
+
 .experience-container{
     display: flex;
     width: 100%;
@@ -193,6 +242,20 @@ header ul a {
 }
 .experience-container .experience-detail ul {
     list-style-image: url("./assets/tick.svg");
+}
+.experience-container .navigation-arrows {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.experience-container .navigation-arrows button{
+    background-color: transparent;
+    border: none;
+    /* padding: 10px; */
+    color: #FF5722;
+    font-size: 1.5em;
+    display: none;
 }
 
 /* Styling for the skills component */
@@ -280,6 +343,24 @@ footer .footer-container {
     align-items: center;
 }
 
+/*************************************************
+    STYLING FOR PROJECTS PAGE
+*************************************************/
+
+.ProjectPage p:first-child{
+    width: 60%;
+}
+.ProjectPage h2 {
+    font-size: 4em;
+    font-weight: 800;
+}
+.ProjectPage span {
+    font-weight: 800;
+}
+.ProjectPage ul {
+    list-style: none;
+    margin-top: 10vh;
+}
 
 /* Responsive styling */
 @media (max-width: 1200px) {
@@ -331,6 +412,10 @@ footer .footer-container {
     .experience ul {
         margin-left: 20px;
     }
+    .experience-container .navigation-arrows button{
+        display: block;
+    }
+    
     .skill-container {
         flex-direction: column;
         align-items: left;
