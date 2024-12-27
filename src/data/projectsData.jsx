@@ -1,4 +1,4 @@
-import {projectImage1} from "../assets/dummy.png"
+import projectImage1 from "../assets/dummy.png"
 import projectImage2 from "../assets/dummy.webp"
 
 const projectsData = [
