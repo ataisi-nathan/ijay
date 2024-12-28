@@ -292,8 +292,11 @@ footer a {
 }
 footer .footer__nav {
     display: flex;
-    width: calc(100vw-120px);
+    width: 100%;
     justify-content: space-between;
+}
+footer .nav-list {
+    gap: 1em;
 }
 footer ul {
     display: flex;
