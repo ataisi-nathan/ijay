@@ -1,58 +1,59 @@
 import React, { useState } from "react";
 import { useSwipeable } from "react-swipeable";
+import ExperienceData from "../data/experienceData";
 
 function Experience() {
     const [activeCompany, setActiveCompany] = useState(0);
 
-    const companies = [
-        {
-            name: "Company 1",
-            position: "Position @ Company 1",
-            duration: "Month 20YY - Present",
-            details: [
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla optio facilis voluptate laudantium.",
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, doloribus."
-            ]
-        },
-        {
-            name: "Company 2",
-            position: "Position @ Company 2",
-            duration: "Month 20YY - Present",
-            details: [
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla optio facilis voluptate laudantium.",
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, doloribus."
-            ]
-        },
-        {
-            name: "Company 3",
-            position: "Position @ Company 3",
-            duration: "Month 20YY - Present",
-            details: [
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla optio facilis voluptate laudantium.",
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, doloribus."
-            ]
-        },
-        {
-            name: "Company 4",
-            position: "Position @ Company 4",
-            duration: "Month 20YY - Present",
-            details: [
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla optio facilis voluptate laudantium.",
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, doloribus."
-            ]
-        }
-    ];
+    // const companies = [
+    //     {
+    //         name: "Company 1",
+    //         position: "Position @ Company 1",
+    //         duration: "Month 20YY - Present",
+    //         details: [
+    //             "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    //             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla optio facilis voluptate laudantium.",
+    //             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, doloribus."
+    //         ]
+    //     },
+    //     {
+    //         name: "Company 2",
+    //         position: "Position @ Company 2",
+    //         duration: "Month 20YY - Present",
+    //         details: [
+    //             "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    //             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla optio facilis voluptate laudantium.",
+    //             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, doloribus."
+    //         ]
+    //     },
+    //     {
+    //         name: "Company 3",
+    //         position: "Position @ Company 3",
+    //         duration: "Month 20YY - Present",
+    //         details: [
+    //             "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    //             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla optio facilis voluptate laudantium.",
+    //             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, doloribus."
+    //         ]
+    //     },
+    //     {
+    //         name: "Company 4",
+    //         position: "Position @ Company 4",
+    //         duration: "Month 20YY - Present",
+    //         details: [
+    //             "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    //             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla optio facilis voluptate laudantium.",
+    //             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, doloribus."
+    //         ]
+    //     }
+    // ];
 
     const nextCompany = () => {
-        setActiveCompany((prev) => (prev + 1) % companies.length);
+        setActiveCompany((prev) => (prev + 1) % ExperienceData.length);
     };
 
     const prevCompany = () => {
-        setActiveCompany((prev) => (prev - 1 + companies.length) % companies.length);
+        setActiveCompany((prev) => (prev - 1 + ExperienceData.length) % ExperienceData.length);
     };
 
     // Swipe handlers
@@ -70,7 +71,7 @@ function Experience() {
             </h3>
             <div className="experience-container">
                 <div className="vertical-line">
-                    {companies.map((_, index) => (
+                    {ExperienceData.map((_, index) => (
                         <span
                             key={index}
                             className={index === activeCompany ? "active" : ""}
@@ -78,7 +79,7 @@ function Experience() {
                     ))}
                 </div>
                 <div className="experience-company">
-                    {companies.map((company, index) => (
+                    {ExperienceData.map((company, index) => (
                         <h4
                             key={index}
                             className={index === activeCompany ? "active" : ""}
@@ -90,11 +91,11 @@ function Experience() {
                 </div>
                 <div className="experience-detail">
                     <h4>
-                        {companies[activeCompany].position} <span>@ {companies[activeCompany].name}</span>
+                        {ExperienceData[activeCompany].position} <span>@ {ExperienceData[activeCompany].name}</span>
                     </h4>
-                    <h5>{companies[activeCompany].duration}</h5>
+                    <h5>{ExperienceData[activeCompany].duration}</h5>
                     <ul>
-                        {companies[activeCompany].details.map((detail, idx) => (
+                        {ExperienceData[activeCompany].details.map((detail, idx) => (
                             <li key={idx}>{detail}</li>
                         ))}
                     </ul>

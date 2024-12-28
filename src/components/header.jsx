@@ -1,6 +1,6 @@
 import { SiChatbot } from "react-icons/si"
 import { FaGripLines, FaXmark } from "react-icons/fa6"
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 
 function Header() {
@@ -26,7 +26,12 @@ function Header() {
                             </NavLink>
                         </li>
                         <li>
-                            <a href="/#project">Projects</a>
+                            <NavLink
+                                to="/projects"
+                                className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+                            >
+                                Projects
+                            </NavLink>
                         </li>
                         <li>
                             <NavLink
@@ -39,7 +44,8 @@ function Header() {
                     </ul>
                 </nav>
                 <div className="contact">
-                    <SiChatbot />
+                    <Link to="/contact"><SiChatbot /></Link>
+                    
                 </div>
                 <div className="ham">
                     <FaGripLines onClick={toggleClass} className={isActive ? "show hide" : "show"} />
@@ -58,7 +64,12 @@ function Header() {
                             </NavLink>
                         </li>
                         <li>
-                            <a href="/#project">Projects</a>
+                            <NavLink
+                                to="/projects"
+                                className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+                            >
+                                Projects
+                            </NavLink>
                         </li>
                         <li>
                             <NavLink
@@ -66,6 +77,14 @@ function Header() {
                                 className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
                             >
                                 About
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/contact"
+                                className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+                            >
+                                Contact
                             </NavLink>
                         </li>
                     </ul>

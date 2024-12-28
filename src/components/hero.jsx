@@ -1,5 +1,6 @@
 import { MdPerson } from "react-icons/md";
 import { Link } from "react-router-dom";
+import profile from "../assets/profile.png"
 
 function CallToAction() {
     return (
@@ -29,8 +30,8 @@ function Hero() {
             </div>
             <div className="hero__right">
                 <div className="hero__circle">
-                    <MdPerson className="photo" size={64} />
                 </div>
+                <img className="photo" src={profile} alt="Ijay's picture" />
             </div>
         </section>
     );

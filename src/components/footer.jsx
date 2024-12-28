@@ -31,6 +31,14 @@ function Footer() {
                             About
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink
+                            to="/contact"
+                            className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+                        >
+                            Contact
+                        </NavLink>
+                    </li>
                 </ul>
             </nav>
                 <div className="footer__socials">
@@ -44,7 +52,7 @@ function Footer() {
                         <SiInstagram size={24} />
                     </a>
                     <a 
-                        href="https://www.instagram.com" 
+                        href="https://www.linkedin.com" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         aria-label="Instagram"
@@ -53,7 +61,7 @@ function Footer() {
                         <SiLinkedin size={24} />
                     </a>
                     <a 
-                        href="https://www.instagram.com" 
+                        href="https://www.github.com" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         aria-label="Instagram"

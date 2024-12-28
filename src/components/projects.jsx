@@ -1,5 +1,6 @@
 import React from "react";
 import projectsData from "../data/projectsData";
+import logo from '../assets/dummy.png'
 
 function Projects() {
     return (
@@ -14,7 +15,7 @@ function Projects() {
                             className="project-image"
                             style={{ backgroundImage: `url(${project.image})` }}
                         >
-                            <img src={project.image} alt={project.title} />
+                            {/* <img src={project.image} alt={project.title} /> */}
                         </div>
                         <h4>{project.title}</h4>
                         <p>{project.description}</p>

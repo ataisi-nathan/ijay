@@ -125,15 +125,17 @@ header ul a {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .hero__circle {
     border: 5px dashed var(--secondary-color);
     border-radius: 50%;
-    padding: 20px;
+    width: 350px;
+    height: 350px;
+    position: absolute;
 }
-.hero__circle .photo {
-    width: 300px;
-    height: 300px;
+.photo {
+    width: 200px;
 }
 
 /* Styling for the project component */
@@ -356,6 +358,67 @@ footer .footer-container {
     list-style: none;
     margin-top: 10vh;
 }
+.ProjectPage h3 {
+    font-size: 1.7em;
+    font-weight: 700;
+    margin-top: 50px;
+}
+.ProjectPage img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/*************************************************
+    STYLING FOR ABOUT PAGE
+*************************************************/
+.about-me h2 {
+    font-size: 4em;
+    font-weight: 700;
+}
+.about-me .about-paragraph {
+    border-left: 5px solid var(--secondary-color);
+    padding-left: 10px;
+}
+.about-me .myExperience {
+    font-size: 3em;
+    font-weight: 600;
+    margin-top: 50px;
+
+}
+.about-me ul {
+    list-style: decimal;
+    font-size: 4em;
+    /* margin-bottom: 15vh; */
+}
+.about-me li {
+    margin-bottom: 100px;
+}
+.about-me ul h3 {
+    font-size: 0.6em;
+}
+.about-me ul p {
+    font-size: 0.3em;
+}
+.about-me ul h5 {
+    font-size: 0.3em;
+    color: var(--secondary-color);
+}
+
+/*************************************************
+    STYLING FOR CONTACT PAGE
+*************************************************/
+.contact{
+    display: flex;
+    align-items: center;
+    margin-top: 10vh;
+}
+.contact h2 {
+    font-size: 4em;
+    font-weight: 700;
+}
+.contact a{
+    padding: 0 10px;
+}
 
 /* Responsive styling */
 @media (max-width: 1200px) {
@@ -380,7 +443,7 @@ footer .footer-container {
     .ham {
         display: block;
     }
-    header nav, .contact {
+    header nav, header .contact {
         display: none;
     }
     .mobile-nav {
@@ -413,9 +476,6 @@ footer .footer-container {
     .experience-container .navigation-arrows button{
         display: block;
     }
-    /* .skills {
-        margin-top: 35vh;
-    } */
     .skill-container {
         flex-direction: column;
         align-items: left;
@@ -438,6 +498,19 @@ footer .footer-container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .ProjectPage h2 {
+        font-size: 2.7em;
+    }
+    .about-me h2 {
+        font-size: 2.7em;
+    }
+    .contact {
+        flex-direction: column;
+        margin-bottom: 10vh;
+    }
+    .contact h2 {
+        font-size: 2.7em;
     }
 }
 @media (max-width:363px) {
