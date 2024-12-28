@@ -62,6 +62,9 @@ header ul a {
 .ham {
     display: none;
 }
+header .contact {
+    margin-top: 0;
+}
 
 /* Styling for the main container */
 .app__content {
