@@ -1,12 +1,12 @@
 import React from "react";
 import projectsData from "../data/projectsData";
-import logo from '../assets/dummy.png'
+import Project from "../assets/project.png"
 
 function Projects() {
     return (
         <div className="projects" id="project">
             <h3>
-                Projects<span>.</span>
+                Projects<span><img src={Project} alt="An Icon for Projects" /></span>
             </h3>
             <div className="container">
                 {projectsData.map((project) => (

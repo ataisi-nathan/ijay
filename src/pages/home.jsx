@@ -1,3 +1,4 @@
+import Articles from "../components/articles";
 import Experience from "../components/experience";
 import Hero from "../components/hero";
 import Projects from "../components/projects";
@@ -7,6 +8,7 @@ function Home() {
     return(
         <>
             <Hero />
+            <Articles />
             <Projects />
             <Experience />
             <Skills />

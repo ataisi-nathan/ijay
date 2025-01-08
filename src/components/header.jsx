@@ -1,5 +1,6 @@
 import { SiChatbot } from "react-icons/si"
 import { FaGripLines, FaXmark } from "react-icons/fa6"
+import { SiGithub, SiLinkedin } from "react-icons/si";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 
@@ -35,16 +36,41 @@ function Header() {
                         </li>
                         <li>
                             <NavLink
-                                to="/about"
+                                to="/articles"
                                 className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
                             >
-                                About
+                                Articles
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/contact"
+                                className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+                            >
+                                Contact
                             </NavLink>
                         </li>
                     </ul>
                 </nav>
                 <div className="contact">
-                    <Link to="/contact"><SiChatbot /></Link>
+                    <a 
+                        href="https://www.linkedin.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                        className="footer__social-link"
+                    >
+                        <SiLinkedin size={24} />
+                    </a>
+                    <a 
+                        href="https://www.github.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                        className="footer__social-link"
+                    >
+                        <SiGithub size={24} />
+                    </a>
                     
                 </div>
                 <div className="ham">
@@ -73,10 +99,10 @@ function Header() {
                         </li>
                         <li>
                             <NavLink
-                                to="/about"
+                                to="/articles"
                                 className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
                             >
-                                About
+                                Articles
                             </NavLink>
                         </li>
                         <li>

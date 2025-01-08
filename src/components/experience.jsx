@@ -1,52 +1,10 @@
 import React, { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import ExperienceData from "../data/experienceData";
+import Bag from "../assets/bag.png"
 
 function Experience() {
     const [activeCompany, setActiveCompany] = useState(0);
-
-    // const companies = [
-    //     {
-    //         name: "Company 1",
-    //         position: "Position @ Company 1",
-    //         duration: "Month 20YY - Present",
-    //         details: [
-    //             "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    //             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla optio facilis voluptate laudantium.",
-    //             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, doloribus."
-    //         ]
-    //     },
-    //     {
-    //         name: "Company 2",
-    //         position: "Position @ Company 2",
-    //         duration: "Month 20YY - Present",
-    //         details: [
-    //             "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    //             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla optio facilis voluptate laudantium.",
-    //             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, doloribus."
-    //         ]
-    //     },
-    //     {
-    //         name: "Company 3",
-    //         position: "Position @ Company 3",
-    //         duration: "Month 20YY - Present",
-    //         details: [
-    //             "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    //             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla optio facilis voluptate laudantium.",
-    //             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, doloribus."
-    //         ]
-    //     },
-    //     {
-    //         name: "Company 4",
-    //         position: "Position @ Company 4",
-    //         duration: "Month 20YY - Present",
-    //         details: [
-    //             "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    //             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla optio facilis voluptate laudantium.",
-    //             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, doloribus."
-    //         ]
-    //     }
-    // ];
 
     const nextCompany = () => {
         setActiveCompany((prev) => (prev + 1) % ExperienceData.length);
@@ -67,7 +25,10 @@ function Experience() {
     return (
         <div className="experience">
             <h3>
-                Experience<span>.</span>
+                Experience
+                <span>
+                    <img src={Bag} alt="An Icon for experience" />
+                </span>
             </h3>
             <div className="experience-container">
                 <div className="vertical-line">

@@ -1,9 +1,9 @@
-
+import skill from "../assets/skill.png"
 
 function Skills() {
     return (
         <div className="skills">
-            <h3>Skills<span>.</span></h3>
+            <h3>Skills<span><img src={skill} alt="A skill icon" /></span></h3>
             <div className="skill-container">
                 <div className="backend">
                     <h4>Backend</h4>
