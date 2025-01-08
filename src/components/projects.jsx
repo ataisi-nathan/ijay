@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { MdOutlineArrowRightAlt } from "react-icons/md";
 import projectsData from "../data/projectsData";
 import Project from "../assets/project.png"
 
@@ -15,12 +17,17 @@ function Projects() {
                             className="project-image"
                             style={{ backgroundImage: `url(${project.image})` }}
                         >
-                            {/* <img src={project.image} alt={project.title} /> */}
                         </div>
                         <h4>{project.title}</h4>
                         <p>{project.description}</p>
                     </div>
                 ))}
+                <div className="more">
+                    <Link to="/projects">
+                        <MdOutlineArrowRightAlt color="#F29F58" />
+                        <p>See More</p>
+                    </Link>
+                </div>
             </div>
         </div>
     );
