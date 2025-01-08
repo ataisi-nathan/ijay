@@ -63,4 +63,8 @@ npm run dev
 ├── index.html                # HTML template
 ├── package.json              # Project metadata and dependencies
 └── README.md                 # This file
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> 0e456428b772858437933be773b50a13a76241f3
